@@ -1,0 +1,84 @@
+  class MessageWriter {
+  private IMessageFormatter messageFormatter;
+  public void writeMessage(String message) {
+    String cMessage = null;
+            
+    cMessage = messageFormatter.formatMessage(message);
+    System.out.println(cMessage);
+  }
+  
+  public void setMessageFormatter(IMessageFormatter messageFormatter) {
+    this.messageFormatter = messageFormatter;
+  }
+}
+
+interface IMessageFormatter {
+  String formatMessage(String message);
+}
+class HTMLMessageFormatterImpl implements IMessageFormatter {}
+class PDFMessageFormatterImpl implements IMessageFormatter {}
+
+class MessageFormatterFactory{
+  public static IMessageFormatter createMessageFormatter(String type) {
+    IMessageFormatter messageFormatter = null;
+    if(type.equals("html")) {
+      messageFormatter = new HTMLMessageFormatterImpl();
+    }else if(type.equals("pdf")) {
+      messageFormatter = new PDFMessageFormatterImpl();
+    }
+    return messageFormatter;
+  }
+}
+
+class Test {
+  public static void main(String[] args) {
+    MessageWriter messageWriter = new MessageWriter();
+    IMessageFormatter messageFormatter = MessageFormatterFactory.getMessageFormatter("html");
+    
+    messageWriter.setMessageFormatter(messageFormatter);    
+    messageWriter.writeMessage("welcome to sdp");
+  }
+}
+
+Why are we looking for avoiding coupling between the classes? Even though the code changes required in switching between the classes is just 1 line why are we
+so concerned about the one line.
+
+How Does an application being developed will be moved to production, What are the stages you guys follow in moving the application to production.
+
+Stages in moving the application from developement to production?
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
