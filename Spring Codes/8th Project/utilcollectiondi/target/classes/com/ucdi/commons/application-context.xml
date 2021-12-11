@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<bean id="contract" class="com.ucdi.beans.Contract">
+		<property name="contractNo" value="98838" />
+		<property name="title" value="eectric work contract" />
+		<property name="works" ref="worksList">
+			<!-- <list value-type="java.lang.String"> <value>Transformer Maintenance</value> 
+				<value>Electrical Substation repair</value> <value>Replace Street pools with 
+				cement</value> </list> <util:list value-type="java.lang.String" list-class="java.util.Vector"> 
+				<value>Transformer Maintenance</value> <value>Electrical Substation repair</value> 
+				<value>Replace Street pools with cement</value> </util:list> -->
+		</property>
+	</bean>
+	<util:list id="worksList" value-type="java.lang.String"
+		list-class="java.util.Stack">
+		<value>Transformer Maintenance</value>
+		<value>Electrical Substation repair</value>
+		<value>Replace Street pools with cement</value>
+	</util:list>
+
+
+</beans>

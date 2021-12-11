@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="parcel" class="com.cdi.beans.Parcel">
+		<constructor-arg value="awb456789" />
+		<property name="source" value="Hyderabad" />
+		<property name="destination" value="Bangalore" />
+		<property name="goods">
+			<list value-type="java.lang.String">
+				<value>documents</value>
+				<value>pendrive</value>
+				<value>stationary</value>
+				<value>T-Shirt</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="staff1" class="com.cdi.beans.Staff">
+		<property name="staffNo" value="1" />
+		<property name="fullName" value="himanshu Sharma" />
+		<property name="age" value="22" />
+		<property name="gender" value="Male" />
+	</bean>
+	<bean id="staff2" class="com.cdi.beans.Staff">
+		<property name="staffNo" value="2" />
+		<property name="fullName" value="Ankita Upadhyay" />
+		<property name="age" value="20" />
+		<property name="gender" value="Male" />
+	</bean>
+	<bean id="store" class="com.cdi.beans.Store">
+		<constructor-arg value="9893"></constructor-arg>
+		<property name="storeName" value="Red Hills Store" />
+		<property name="location" value="west woods" />
+		<property name="staff">
+			<set value-type="com.cdi.beans.Staff">
+				<ref bean="staff1" />
+				<ref bean="staff2" />
+			</set>
+		</property>
+	</bean>
+
+
+	<bean id="person1" class="com.cdi.beans.Person">
+		<constructor-arg value="u984356" />
+		<property name="fullName" value="Himanshu Sharma" />
+		<property name="age" value="22" />
+		<property name="gender" value="male" />
+	</bean>
+	<bean id="person2" class="com.cdi.beans.Person">
+		<constructor-arg value="u984676" />
+		<property name="fullName" value="Ankita Sharma" />
+		<property name="age" value="21" />
+		<property name="gender" value="female" />
+	</bean>
+	<bean id="electionCommission"
+		class="com.cdi.beans.ElectionCommission">
+		<property name="electrolList">
+			<map key-type="java.lang.String"
+				value-type="com.cdi.beans.Person">
+				<entry key="v987645" value-ref="person1" />
+				<entry key="v748492" value-ref="person2" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="profile" class="com.cdi.beans.Profile">
+		<property name="fullName" value="Peter" />
+		<property name="age" value="23" />
+		<property name="wishlist">
+			<props>
+			<prop key="car">Lamborgini</prop>
+			<prop key="bilke">Harley Davidson</prop>
+			<prop key="house">Duplex Villa</prop>
+			</props>
+		</property>
+
+	</bean>
+
+</beans>

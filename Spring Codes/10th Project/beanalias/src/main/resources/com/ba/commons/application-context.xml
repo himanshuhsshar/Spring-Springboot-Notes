@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" name="HS,Him Sh" class="com.ba.beans.Person">
+		<property name="personNo" value="984" />
+		<property name="personName" value="Himanshu sharma" />
+		<property name="age" value="23" />
+		<property name="gender" value="male" />
+	</bean>
+	<alias name="HS" alias="Himanshu Sha" />
+	<alias name="person" alias="Himanshu,Sha" />
+	
+</beans>
