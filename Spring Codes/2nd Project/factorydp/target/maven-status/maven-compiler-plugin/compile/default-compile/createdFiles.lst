@@ -1,0 +1,6 @@
+com\fdp\beans\IMessageFormatter.class
+com\fdp\beans\PDFMessageFormatterImpl.class
+com\fdp\beans\HTMLMessageFormatterImpl.class
+com\fdp\beans\MessageWriter.class
+com\fdp\test\FDPTest.class
+com\fdp\helper\IMessageFormatterFactory.class
