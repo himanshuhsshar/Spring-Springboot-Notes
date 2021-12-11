@@ -1,0 +1,5 @@
+com\sdp\beans\IMessageFormatter.class
+com\sdp\beans\MessageWriter.class
+com\sdp\beans\PDFMessageFormatterImpl.class
+com\sdp\test\SDPTest.class
+com\sdp\beans\HTMLMessageFormatterImpl.class
