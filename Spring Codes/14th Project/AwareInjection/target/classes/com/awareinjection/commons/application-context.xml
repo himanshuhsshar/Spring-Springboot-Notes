@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="car" class="com.awareinjection.beans.Car"> -->
+<!-- 		<property name="engine" ref="yamaha" /> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="yamahaEngine" class="com.awareinjection.beans.YamahaEngineImpl" /> -->
+<!-- 	<bean id="suzukiEngine" class="com.awareinjection.beans.SuzikiEngineImpl" /> -->
+<!-- 	<alias name="suzukiEngine" alias="yamaha" /> -->
+<!-- 	<bean id="car" class="com.awareinjection.beans.Car"> -->
+<!-- 		<constructor-arg value="suzukiEngine" /> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="yamahaEngine" class="com.awareinjection.beans.YamahaEngineImpl" /> -->
+<!-- 	<bean id="suzukiEngine" class="com.awareinjection.beans.SuzikiEngineImpl" /> -->
+<bean id="car" class="com.awareinjection.beans.Car">
+	<constructor-arg value="yamahaEngine" />
+	<property name="modelName" value="VW Ameo" />
+</bean>
+	<bean id="yamahaEngine"
+		class="com.awareinjection.beans.YamahaEngineImpl" />
+	<bean id="suzukiEngine"
+		class="com.awareinjection.beans.SuzikiEngineImpl" />
+</beans>
