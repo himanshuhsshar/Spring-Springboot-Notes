@@ -95,7 +95,7 @@ class MessageBoard {
     String cMessage = null;
     
     cMessage = messageFormatter.format(message);
-    // display it on the message board
+    // display iton the message board
   }
   public void setMessageFormatter(IMessageFormatter messageFormatter) {
     this.messageFormatter = messageFormatter;

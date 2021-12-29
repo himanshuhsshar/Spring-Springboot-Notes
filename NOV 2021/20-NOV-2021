@@ -38,8 +38,8 @@ We can define our application classes information in
 Spring Framework has provided multiple implementations for BeanFactory interface each of them are responsible for reading the bean definition information from various different formats. Now programmer can easily switch from one configuration file format to another just by changing implementation of BeanFactory 
 
 BeanFactory
-|-XMLBeanFactory (xml)
-|-DefaultListableBeanFactory (properties)
+|-XMLBeanFactory 
+|-DefaultListableBeanFactory 
 
 BeanFactory beanFactory = new XMLBeanFactory(new ClassPathResource("application-context.xml"));
 

@@ -7,7 +7,7 @@ messageWriter.class=com.sdp.beans.MessageWriter
 messageWriter.messageFormatter=htmlMessageFormatter
 
 messageBoard.class=com.sdp.beans.MessageBoard
-messageBoard.messageFormatter=pdfMessageFormatter
+messageBoard.messageFormatter=htmlMessageFormatter
 
 #1 Dont write classname of a class in another java class, it makes our classes tightly coupled
 #2 Dont manage the dependencies in java class, to switch dependencies again we need to modify the code
@@ -61,11 +61,17 @@ class MessageBoard {
 
 
 How to make the classes loosely-coupled in an Application?
-#1 use Strategy Design Pattern in desiging the application classes
+#1 use Strategy Design Patter in desiging the application classes
 #2 externalize the classes and their dependencies information in external configuration files
 #3 write the code for reading class declarations and depenency information in instantiating the objects of the application classes.
   
 Spring Core is all about instantiating the objects and managing the dependencies between the classes.
+  
+
+
+
+
+  
   
   
   

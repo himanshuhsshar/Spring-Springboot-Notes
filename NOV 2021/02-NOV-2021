@@ -1,4 +1,4 @@
-  class MessageWriter {
+class MessageWriter {
   private IMessageFormatter messageFormatter;
   public void writeMessage(String message) {
     String cMessage = null;
@@ -18,7 +18,7 @@ interface IMessageFormatter {
 class HTMLMessageFormatterImpl implements IMessageFormatter {}
 class PDFMessageFormatterImpl implements IMessageFormatter {}
 
-class MessageFormatterFactory{
+class  {
   public static IMessageFormatter createMessageFormatter(String type) {
     IMessageFormatter messageFormatter = null;
     if(type.equals("html")) {
@@ -40,12 +40,6 @@ class Test {
   }
 }
 
-Why are we looking for avoiding coupling between the classes? Even though the code changes required in switching between the classes is just 1 line why are we
-so concerned about the one line.
-
-How Does an application being developed will be moved to production, What are the stages you guys follow in moving the application to production.
-
-Stages in moving the application from developement to production?
 
   
 

@@ -17,7 +17,7 @@ eg.. we connect to the jndi registry and perform a lookup for retrieving the Dat
 A class will acquire its dependent objects by getting into an contractual agreement with the underlying container or runtime, as the dependents are acquired through contracts we call it as "contextual dependency lookup"
 eg.. A Servlet class will acquire its dependent object ServletConfig from ServletContainer by getting into an agreement with Servlet Container. A Servlet has to implement an Servlet interface and override init(ServletConfig) so that container during the time of instantiating the Servlet object will invoke init() method on the Servlet by passing the dependent object ServletConfig, which is nothing but "contextual dependency lookup".
 	
-Both dependency lookup and contextual dependency lookup are old methodologies of collaborating the objects and are supported by jee from early stages itself.
+Both dependency lookup and contextual dependency lookup or old methodologies of collaborating the objects and are supported by jee from early stages itself.
 	
 #2 dependency injection
 we dont write the code in our class for getting/pulling/acquiring the dependent object, because if we write the code in our class we will be tightly coupled either through concreate classname or logical classname of another class in our class, instead let the other person itself pass the dependent object into our class

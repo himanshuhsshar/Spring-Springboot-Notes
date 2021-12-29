@@ -20,12 +20,13 @@ sdpattern (maven project)
   |-classes (hidden)
     |-*.class
     |-appClasses.properties  
-  |-sdpattern.jar
+|-sdpattern.jar
 
       
-sourcecode = anything that acts as an input during/for executing the program is called sourcecode.
-or
-The input required for running your application is called sourcecode.
+sourcecode = anything that acts as an input during/for executing the program is called sourcecode
+
+
+  
 
 
 app-classes.properties
