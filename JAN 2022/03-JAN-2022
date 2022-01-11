@@ -63,8 +63,8 @@ class TodoManager {
 	}
 }
 
-1. declare the default constructor of your class as private, so that other classes of our application cannot instantiate the object of our class, so we have total control of 
-creating the objects of our class
+1. declare the default constructor of your class as private, so that other classes of our application cannot instantiate the object of our class, so we have total control
+of creating the objects of our class
 	
 	
 
