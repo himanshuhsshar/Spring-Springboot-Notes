@@ -1,14 +1,14 @@
 There are 3 classloaders provided as part of the core jdk distribution
 1. bootstrap classloader
-bootstrap classloader is called as primordial or ultimate classloader. it is writting in native language like c and compiled to execute on platform, so it is also called "native" classloader.
-it loads all the core jdk classes that are shipped as part of $java_home/lib/rt.jar
+bootstrap classloader is called as primordial or ultimate classloader. it is writting in native language like c and compiled to execute on platform, so it is 
+also called "native" classloader. it loads all the core jdk classes that are shipped as part of $java_home/lib/rt.jar
 
 2. extension classloader
 extension classloader is an immediate child of bootstrap classloader, it is an another java class that takes care of loading the bytecode of java classes into jvm memory.
 it loads the classes from 2 different locations
 
-note:- extension classloader doesnt load .class files directly rather it loads the class files packaged inside an jar only since the purpose of extension classloader is to extend the capabilities of core jdk by loading third-party libraries
-it loads the jar container classfiles from 2 different locations
+note:- extension classloader doesnt load .class files directly rather it loads the class files packaged inside an jar only since the purpose of extension classloader 
+is to extend the capabilities of core jdk by loading third-party libraries it loads the jar container classfiles from 2 different locations
 	1. all the jar classes that are inside the $java_home\lib\ext directory
 	2. java.ext.dirs system property pointed directory location containing jar classfiles will be loaded by extension classloader
 
@@ -35,7 +35,8 @@ for eg let us say we have 2 different applications running within a jvm, how to 
 That is where jvm level variables called System Properties comes into picture.
 
 definition:	
-System Properties are the variables defined at jvm scope and can be used or accessed by all of the applications running within the jvm. these are key/value pair values where we can access the value using the key
+System Properties are the variables defined at jvm scope and can be used or accessed by all of the applications running within the jvm. these are key/value pair values
+where we can access the value using the key
 	
 
 How to pass system properties to a program?
