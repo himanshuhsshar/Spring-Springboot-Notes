@@ -62,7 +62,8 @@ Here both circle1 & circle2 holds same state and is read-only, irrespective of t
 unless the parameters of different.
 So we dont need to have multiple objects of the class, instead allow to create only one object.
 So make the class as Singleton.
------------------------------------------------------------------------------------------------#3 
+-----------------------------------------------------------------------------------------------
+#3 
 In a class, we have member variables and member methods. the member methods are using the state of the object. Here the state of the object is completely sharable,
 in such case we dont want to create multiple objects of the same class keeping the duplicate state rather we would wanted to allow only one object of the class by
 making it as singleton.
