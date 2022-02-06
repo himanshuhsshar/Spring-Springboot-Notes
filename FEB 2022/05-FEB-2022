@@ -43,7 +43,7 @@ Math math2 = new Math();
 int sum2 = math2.add(10, 20);
 -----------------------------------------------------------------------------------------------
 #2. 
-In a class, we have attributes and member methods, the member methods are using the state of the object but the object contains completely readonly state.
+In a class, we have attributes and member methods, the member methods are using the state of the object but the object contains completely read only state.
 	
 class Circle {
 	private final double PI=3.1412;
