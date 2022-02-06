@@ -4,9 +4,11 @@ When do we create a class as singleton class?
 There are 3 circumstances under which we go and create a class as singleton class.
 	
 #1
-In a class, we dont have any attributes which means that objects of the class doesnt hold any state. There are member methods defined within the class, but the methods are not using the state of the object because there are no attributes defined.
+In a class, we dont have any attributes which means that objects of the class doesnt hold any state. There are member methods defined within the class, but the
+methods are not using the state of the object because there are no attributes defined.
 The member methods are taking the data interms of parameters and performing the operation and returning the return value.
-The outcome out of executing the member methods will not be dependent on the object we are using in calling them, rather it depends on the parameters we passed in calling the method. In such case creating multiple objects of the class is of nouse, since all the objects hold zero-state. 
+The outcome out of executing the member methods will not be dependent on the object we are using in calling them, rather it depends on the parameters we passed
+in calling the method. In such case creating multiple objects of the class is of nouse, since all the objects hold zero-state. 
 Instead of creating multiple objects, only one object of the class is sufficient, so make the class as singleton.
 	
 	
@@ -56,11 +58,14 @@ double area1 = circle1.area(4);
 Circle circle2 = new Circle();
 double area2 = circle2.area(4);
 
-Here both circle1 & circle2 holds same state and is read-only, irrespective of the object we are using in calling the method area() the outcome will be same, unless the parameters of different.
+Here both circle1 & circle2 holds same state and is read-only, irrespective of the object we are using in calling the method area() the outcome will be same,
+unless the parameters of different.
 So we dont need to have multiple objects of the class, instead allow to create only one object.
 So make the class as Singleton.
 -----------------------------------------------------------------------------------------------#3 
-In a class, we have member variables and member methods. the member methods are using the state of the object. Here the state of the object is completely sharable, in such case we dont want to create multiple objects of the same class keeping the duplicate state rather we would wanted to allow only one object of the class by making it as singleton.
+In a class, we have member variables and member methods. the member methods are using the state of the object. Here the state of the object is completely sharable,
+in such case we dont want to create multiple objects of the same class keeping the duplicate state rather we would wanted to allow only one object of the class by
+making it as singleton.
 	
 signup.jsp
 -------------
