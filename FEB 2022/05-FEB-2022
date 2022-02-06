@@ -8,7 +8,7 @@ In a class, we dont have any attributes which means that objects of the class do
 methods are not using the state of the object because there are no attributes defined.
 The member methods are taking the data interms of parameters and performing the operation and returning the return value.
 The outcome out of executing the member methods will not be dependent on the object we are using in calling them, rather it depends on the parameters we passed
-in calling the method. In such case creating multiple objects of the class is of nouse, since all the objects hold zero-state. 
+in calling the method. In such case creating multiple objects of the class is of no use, since all the objects hold zero-state. 
 Instead of creating multiple objects, only one object of the class is sufficient, so make the class as singleton.
 	
 	
