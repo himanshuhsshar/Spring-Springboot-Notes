@@ -1,6 +1,7 @@
 There are 3 classloaders are provided as part of the core jdk distribution
 1. Bootstrap classloader
-Root or parent classloader within the classloader hierarchy. it is not an java class rather it is written in native language like "c" and compiled to execute on specific platform so it is called native classloader. it loads all the classes that are distributed as part of core jdk which are part of $JAVA_HOME\lib\rt.jar
+Root or parent classloader within the classloader hierarchy. it is not an java class rather it is written in native language like "c" and compiled to execute on specific
+platform so it is called native classloader. it loads all the classes that are distributed as part of core jdk which are part of $JAVA_HOME\lib\rt.jar
 	
 2. Extension classloader
 child/decendent of Bootstrap classloader, it is an java class and loads the classes within a jar file from 2 different locations
@@ -55,7 +56,8 @@ set CLASSPATH=d:\jclwork\appcl;%CLASSPATH%
 java com.appcl.beans.Meeting
 
 
-The CLASSPATH environment variable we configured is permanent for the terminal window we opened. instead of setting CLASSPATH variable we can pass the directory location of the .class files to jvm using -cp or --classpath switches as well which is temporary 
+The CLASSPATH environment variable we configured is permanent for the terminal window we opened. instead of setting CLASSPATH variable we can pass the directory location
+of the .class files to jvm using -cp or --classpath switches as well which is temporary 
 
 e:\>
 java -cp d:\jclwork\appcl com.appcl.beans.Meeting
@@ -75,7 +77,8 @@ app.jar
 	|-A.class
 	|-B.class
 
-set CLASSPATH=d:\work = will not work, because the application\system classloader looks for class files immediately inside a directory, where in jar is also an logical directory if you want to load classes inside a jar set the classpath pointing to jar
+set CLASSPATH=d:\work = will not work, because the application\system classloader looks for class files immediately inside a directory, where in jar is also an logical
+directory if you want to load classes inside a jar set the classpath pointing to jar
 set CLASSPATH=d:\work\app.jar
 
 
