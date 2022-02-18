@@ -3,16 +3,19 @@ There are 2 ways we can distribute an java application
 2. as a java application to the client/enduser
 
 #1. How to distribute java application as a reusable java library to ther other developers?
-We can distribute the sourcecode of the application, given it is an opensource library, incase of commercial distributions we should not deliver sourcecode. In addition to distribute sourcecode we need to deliver the executablecode inthe form .class files as well, so that other developers can quickly use it.
+We can distribute the sourcecode of the application, given it is an opensource library, incase of commercial distributions we should not deliver sourcecode. In addition
+to distribute sourcecode we need to deliver the executablecode inthe form .class files as well, so that other developers can quickly use it.
 	
-In an application typically there exists bunch of .class files, distributing them one after the other one is a difficult job and tough to track, we need to group/collect all of the .class files of our application into a directory and should distribute
+In an application typically there exists bunch of .class files, distributing them one after the other one is a difficult job and tough to track, we need to group/collect
+all of the .class files of our application into a directory and should distribute
 	
 but the problem is we cannt distribute a directory, directories are not transferable and distributable, so we need to zip them to distribute
 There are problems in distributing our application as a zip
 1. zip is platform specific and there are different zipping standards are there for each platform that makes it non-portable across the platforms
 2. in order to use the zip file .class files the other developer has to unzip the file which requires unzipping tools installed on his machine
 	
-To solve the above problems java has introduced jar distribution, where a jar is nothing but an compressed format of multiple .class files of an application which has lot of advantages:
+To solve the above problems java has introduced jar distribution, where a jar is nothing but an compressed format of multiple .class files of an application which has
+lot of advantages:
 1. portable across all the platforms
 2. the java classloaders can directly read the .class files packaged inside the jar file, so no need to manually unzip/unjar to use them.
 3. no need of any unzip/unjar tools to be installed on the machine
@@ -64,7 +67,8 @@ e:\>
 set CLASSPATH=d:\work\gofit.jar
 java com.gofit.launcher.GofitApplication
 
-if we distribute our java application as a jar file, inorder to run the application we need to set the classpath pointing to the Jar location and run the Main class inside the jar by using java fqnMainClass
+if we distribute our java application as a jar file, inorder to run the application we need to set the classpath pointing to the Jar location and run the Main class
+inside the jar by using java fqnMainClass
 
 Now let say we are delivering the above jar packaged 	java application to the client/enduser. For an enduser inorder to run the jar packaged java application:
 1. he has to set the classpath pointing the jar file
@@ -80,7 +84,8 @@ So inorder to help the client/enduser the developer can distribute documentation
 1. reading through that documentation and carefully applying those steps is tedious job and takes quite an amount of time to run the application
 2. looks like to use an java developer you should also be a java developer since it is not easy job to run java applications.
 	
-if there is no way to easily launch or distribute an java application, indirectly java is going to loose the market since people find it tough to execute java applications for usage.
+if there is no way to easily launch or distribute an java application, indirectly java is going to loose the market since people find it tough to execute java applications
+for usage.
 	
 	
 
