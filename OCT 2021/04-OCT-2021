@@ -8,7 +8,8 @@ While reusing the functionality of another class preferrable use composition rat
 There are problems in reusing the functionality of another class through Inheritance so to avoid them use Composition.
 1 Many of the realtime usecases are solvable through composition rather than inheritance, because a class wants to use few functionalities of another class only.
   
-2 Most of the languages including java doesnt support multiple inheritance, so if a class wants to reuse the functionality of multiple other classes, the only way is through composition
+2 Most of the languages including java doesnt support multiple inheritance, so if a class wants to reuse the functionality of multiple other classes, the only way is
+through composition
 
 3 Inheritance makes the classes more fragile, whereas composition makes them less fragile.
 Fragile: easily/quickly breakable (or) very delicate  
@@ -41,7 +42,8 @@ class C {
   }
 }
 
-over the time the developer of class A wanted to change the return type of method m2() from int to double and has made the change without the knowledge of who is using his class.
+over the time the developer of class A wanted to change the return type of method m2() from int to double and has made the change without the knowledge of who is
+using his class.
   
 class A {
   double m2(int i) {
@@ -63,7 +65,8 @@ class B extends A {
   }
 }
 
-but here the m2() of class B is not having same signature and returnType of class A, so it is not overriding, sameway the parameters are same in number so it is not overloading. Now it becomes duplicate method which results in Rutime Error during execution.
+but here the m2() of class B is not having same signature and returnType of class A, so it is not overriding, sameway the parameters are same in number so it is
+not overloading. Now it becomes duplicate method which results in Rutime Error during execution.
 The only way to make B class works is by changing the returnType of method m2() of class B to double
 class B extends A {
   double m2(int i) {
@@ -83,7 +86,8 @@ class C {
   }
 }
 
-If we see a change in parent class is not only going to affect child class B, even it leaves the other classes which are using B class in error state, which is nothing but highly fragile.
+If we see a change in parent class is not only going to affect child class B, even it leaves the other classes which are using B class in error state, which is
+nothing but highly fragile.
   
 Instead of using Inheritance if we go for composition our classes will become less fragile, lets see how does it
 
@@ -134,7 +138,8 @@ class B {
     return j;
   }
 }  
-here to make B compatible with A changes, we just only to typecast the return value return from method call on A, we dont need to change the returnType of m2() in B class to double unlike inheritance. with this change my class works and would not affect other classes in my application.
+here to make B compatible with A changes, we just only to typecast the return value return from method call on A, we dont need to change the returnType of m2()
+in B class to double unlike inheritance. with this change my class works and would not affect other classes in my application.
   
 A change in A will effect the B and only B but not other classes in the application, we can control the propagation of changes in composition.
 
