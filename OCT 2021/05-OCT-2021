@@ -6,8 +6,10 @@ Strategy Design Pattern
 #1. Favor composition over inheritance
 While reusing the functionality of another class, prefer composition rather than inheritance
 If we use Inheritance we run into lot of problems
-1. Most of the realtime usecases are solvable through composition only rather than inheritance, because a class wants to use only few of the functionalities of another class most of the time rather than all.
-2. Many languages inlcluding java doesnt support multiple inheritance, so in case if we want to reuse the functionality of multiple classes in our class the only solution is composition
+1. Most of the realtime usecases are solvable through composition only rather than inheritance, because a class wants to use only few of the functionalities
+of another class most of the time rather than all.
+2. Many languages inlcluding java doesnt support multiple inheritance, so in case if we want to reuse the functionality of multiple classes in our class 
+the only solution is composition
 3. Classes will become fragile when we use inheritance and will be less fragile if we use composition
 4. Inheritance doesnt support testability of the code, whereas composition supports testability of the code.
   
