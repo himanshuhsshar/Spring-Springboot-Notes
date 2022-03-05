@@ -3,7 +3,8 @@ There are 3 principles are there in Strategy Design Pattern.
 2. Always design to interfaces, never design to concrete classes
 3. Code should be open for extension and closed for modification
 
-By designing the classes based on the above principle our classes will become completely loosely coupled, there after we can give these classes to spring core asking to manage the dependencies.
+By designing the classes based on the above principle our classes will become completely loosely coupled, there after we can give these classes to spring core
+asking to manage the dependencies.
 --------------------------------------------------------------------------------------------------------
   
 class MessageWriter {
