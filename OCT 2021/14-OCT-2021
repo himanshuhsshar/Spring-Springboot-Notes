@@ -4,7 +4,8 @@ Strategy Design Pattern
 3. Code should be open for extension and closed for modification
 
 #2. Always design to interfaces, never design to concreate classes
-when we use composition for reusing the functionality of another class, our class will become tightly coupled with other class, so a change in another class would effect our class to avoid the coupling use interfaces.
+when we use composition for reusing the functionality of another class, our class will become tightly coupled with other class, so a change in another class would
+effect our class to avoid the coupling use interfaces.
   
 By declaring interface of another class as an attribute, our class can talk to any of the implementations of the interface, such that we will be loosely coupled.
   
