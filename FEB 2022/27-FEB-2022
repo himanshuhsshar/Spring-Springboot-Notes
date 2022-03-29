@@ -24,13 +24,15 @@ class LoanManagerServlet extends HttpServlet {
 	}
 }
 
-There are several classes in our application wanted to use rate interest properties file values within the application, from the above implementation looks like in each
+There are several classes in our application wanted to use rate interest properties file values within the application, from the above implementation looks
+like in each
 class we need to write the logic for verifying the data is available or not and load the data into the cache.
 	
 if each class of our application whoever wanted the data from cache is loading the data into the cache, it loads to lot of problems
-1. redundantly we endup in writing the same code across all the classes in loading the data into the cache due to which all the maintainability problems creep up:
-	1.1 if the underlying source system from where we are reading the data has been changed again we need to modify the code across all the classes whereever we have
-	written the code for loading the data
+1. redundantly we endup in writing the same code across all the classes in loading the data into the cache due to which all the maintainability problems 
+creep up:
+	1.1 if the underlying source system from where we are reading the data has been changed again we need to modify the code across all the classes whereever
+	we have written the code for loading the data
 2. In future if want dont want to cache a specific data, identifying in which classes we are caching and get rid of the code is very difficult
 
 In-short:- Dont write data loading logic into the cache across all the classes of our application
@@ -45,8 +47,8 @@ class LoanManagerServlet extends HttpServlet {
 	}
 }	
 	
-Instead of writing the code for loading the data into the Cache in all the classes of our application why cant we load the data into the Cache byitself during the time
-of instantiating the Cache?
+Instead of writing the code for loading the data into the Cache in all the classes of our application why cant we load the data into the Cache byitself during 
+the time of instantiating the Cache?
 	
 class Cache {
 	private static Cache instance;
