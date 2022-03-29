@@ -108,7 +108,8 @@ sop("interest amount : " + ia);
 
 
 What is depends-on?
-depends-on is used for managing the in-direct dependencies between the bean definitions. here in-direct refers to creational dependencies, if we want to control or manage the order of instantiation of the bean definitions, we can do that by using depends-on
+depends-on is used for managing the in-direct dependencies between the bean definitions. here in-direct refers to creational dependencies, if we want
+to control or manage the order of instantiation of the bean definitions, we can do that by using depends-on
 
 
 
