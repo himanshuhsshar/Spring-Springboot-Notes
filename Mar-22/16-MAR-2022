@@ -1,6 +1,6 @@
 Lookup Method Injection
 ------------------------
-What are the scopes in which we can declare attributes of a class in another class?
+What are the scopes in which we can declare class as a attribute in another class?
 	
 Class           Attribute Type     Allowed (Y/N)
 Singleton       Singleton          Yes
