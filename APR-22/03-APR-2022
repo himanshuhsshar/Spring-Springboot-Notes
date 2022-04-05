@@ -24,7 +24,8 @@ data volumes and persistence operations we carry are very low: jdbc technology
                                   low to moderate: hibernate framework
 
 3. batch processing applications
-They deal with volumneous amount of data and perform bulk operations. Most of the time the data has to be fetches, transformed, validated, filtered, messaged and processed to load the data. so rather than handling these volumes of data in java we can process them in stored procedures 
+They deal with volumneous amount of data and perform bulk operations. Most of the time the data has to be fetches, transformed, validated, filtered, messaged
+and processed to load the data. so rather than handling these volumes of data in java we can process them in stored procedures 
 java jdbc + pl/sql
 
 high performance: 
@@ -36,9 +37,12 @@ high performance:
 legacy project where in it has been designed and implemented using jdbc technology
 
 in this case if we choose hibernate framework there are:
-1. we need to destroy all the code and domain objects in which we carrying the data in our existing application, and need to comeup with new entity classes and mapping files in fetching the data which is a huge rework (which is already in place)
+1. we need to destroy all the code and domain objects in which we carrying the data in our existing application, and need to comeup with new entity classes
+and mapping files in fetching the data which is a huge rework (which is already in place)
 	
-2. but in our case we dont need database portability, because the database of our application is used by other internal applications of our organization. now if I switch the database of my application, all the other applications will fail. so we never wanted to change the underlying database of our application. So what is the point of using Hibernate when we dont need database portability and scarfising the performance of our application.
+2. but in our case we dont need database portability, because the database of our application is used by other internal applications of our organization. now
+if I switch the database of my application, all the other applications will fail. so we never wanted to change the underlying database of our application.
+So what is the point of using Hibernate when we dont need database portability and scarfising the performance of our application.
 	
 
 spring jdbc
@@ -90,7 +94,8 @@ What are the different types of operations we perform on a database?
 
 pl/sql programming in java		
 
-note: we dont create tables through application logic, before the commencement of the application development, the data model and data design will be completed and database tables are created and exported as sql scripts. 
+note: we dont create tables through application logic, before the commencement of the application development, the data model and data design will be 
+completed and database tables are created and exported as sql scripts. 
 while setting up the project for development, we execute these scripts for creating database manually on the machine.
 	
 database 
@@ -154,7 +159,8 @@ but there are third-party DataSource connection pool implementation libraries ar
 2. Proxool
 3. dbcp
 4. Harika db
-In addition to the above spring jdbc has provided their own dummy implementation for DataSource interface called "DriverManagerDataSource", that has to used only for development purpose only and cannot go into production using this implementation.
+In addition to the above spring jdbc has provided their own dummy implementation for DataSource interface called "DriverManagerDataSource", that has to
+used only for development purpose only and cannot go into production using this implementation.
 	
 javax.sql.DataSource
 |-DriverManagerDataSource
