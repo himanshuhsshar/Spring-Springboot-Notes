@@ -1,5 +1,7 @@
 package com.qa.bo;
 
+import java.util.Objects;
+
 public class VehicleBo {
 	private int vehicleNo;
 	private String modelName;
@@ -63,6 +65,26 @@ public class VehicleBo {
 
 	public void setLeaseAmount(float leaseAmount) {
 		this.leaseAmount = leaseAmount;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(color, fuelType, leaseAmount, manufacturer, modelName, registrationNo, vehicleNo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		VehicleBo other = (VehicleBo) obj;
+		return Objects.equals(color, other.color) && Objects.equals(fuelType, other.fuelType)
+				&& Float.floatToIntBits(leaseAmount) == Float.floatToIntBits(other.leaseAmount)
+				&& Objects.equals(manufacturer, other.manufacturer) && Objects.equals(modelName, other.modelName)
+				&& Objects.equals(registrationNo, other.registrationNo) && vehicleNo == other.vehicleNo;
 	}
 
 	@Override
