@@ -27,7 +27,8 @@ class Trip {
 validator.validate(trip);
 
 #2. For the above Constraint annotation to apply validation we need to write our own validator
-upon invoking validate method by passing the bean object, the validator looks at the constraint annotation and identifies the corresponding validator and invokes it by passing attribute value of the object.
+upon invoking validate method by passing the bean object, the validator looks at the constraint annotation and identifies the corresponding validator and
+invokes it by passing attribute value of the object.
 	
 public class PhonenumberValidator implements ConstraintValidator<PhoneNumber, String> {
 	
