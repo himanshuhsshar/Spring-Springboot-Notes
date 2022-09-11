@@ -7,7 +7,8 @@ make sure we have an root package under which all the components of our applicat
 #5. write application class in which create the ioc container using SpringApplication.run(...)
 ------------------------------------------------------------------------------------------------------------------------
 How does spring boot application works?
-When we are working with spring framework application we define the classes as bean definitions through stereotype annotations along with java configuration classes. We pass JavaConfig as an input in creating the ioc container using AnnotationConfigApplicationContext as below.
+When we are working with spring framework application we define the classes as bean definitions through stereotype annotations along with java configuration classes.
+We pass JavaConfig as an input in creating the ioc container using AnnotationConfigApplicationContext as below.
 	
 @Component	
 class Machine {
