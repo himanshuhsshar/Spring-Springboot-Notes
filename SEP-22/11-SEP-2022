@@ -45,7 +45,9 @@ class Test {
 	}
 }
 
-Instead of writing an Configuration class separately we can mark the Test class in which we are creating the ioc container itself as a Configuration class, so that we can eliminate writing one more class additionally. Along with that to make the stereotype annotated classes as bean definitions we need to use @ComponentScan	
+Instead of writing an Configuration class separately we can mark the Test class in which we are creating the ioc container itself as a Configuration class,
+so that we can eliminate writing one more class additionally. Along with that to make the stereotype annotated classes as bean definitions we need to
+use @ComponentScan	
 	
 package com.bootcore.beans;
 class Truck {}
